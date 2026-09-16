@@ -1,0 +1,73 @@
+/* AdherePulse Minimalist Medical UI Styles */
+
+@layer base {
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Medical Card Elevation */
+.clinical-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.clinical-card:hover {
+  border-color: #cbd5e1;
+}
+
+/* Tabular figures for lab values and percentages */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Confidence Interval Band styling */
+.ci-bar-bg {
+  background: #f1f5f9;
+  border-radius: 9999px;
+  position: relative;
+  height: 8px;
+  overflow: hidden;
+}
+
+/* Clean tooltip / badge */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.725rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
